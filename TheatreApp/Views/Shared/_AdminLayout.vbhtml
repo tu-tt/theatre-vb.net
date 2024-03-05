@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-2 vh-100 position-fixed">
                 <div class="w-100 h-100 position-relative">
-                    <img alt="" src="/Static/Wicked-Movie-Logo-PNG.png" class="w-100" />
+                    <img alt="" src="~/Static/vox_cine.png" class="w-75 d-block m-auto my-4" style="filter: invert(1)" />
                     <ul class="list-group list-group-flush mt-2 fs-6">
                         <a class="list-group-item list-group-item-action d-inline-flex align-items-center gap-4 py-3" href="/Admin/Movie">
                             <i class="fa fa-film" aria-hidden="true"></i>

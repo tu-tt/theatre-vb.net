@@ -1,12 +1,15 @@
-﻿Imports System.Web.Optimization
+﻿Imports System.Security.Claims
+Imports System.Web.Helpers
+Imports System.Web.Optimization
 
 Public Class MvcApplication
-    Inherits System.Web.HttpApplication
+	Inherits HttpApplication
 
-    Sub Application_Start()
-        AreaRegistration.RegisterAllAreas()
-        FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters)
-        RouteConfig.RegisterRoutes(RouteTable.Routes)
-        BundleConfig.RegisterBundles(BundleTable.Bundles)
-    End Sub
+	Sub Application_Start()
+		AreaRegistration.RegisterAllAreas()
+		RegisterGlobalFilters(GlobalFilters.Filters)
+		RegisterRoutes(RouteTable.Routes)
+		RegisterBundles(BundleTable.Bundles)
+		AntiForgeryConfig.UniqueClaimTypeIdentifier = ClaimTypes.NameIdentifier
+	End Sub
 End Class
